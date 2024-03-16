@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "littlelogistics",
+	"version": "${version}",
+	"name": "Little Logistics: Fabric Edition",
+	"description": "Adds water logistics: Tugs and Barges!\\n\\\nSee the homepage for usage instructions.\\n\\\n\\n\\\nModpack use:\\n\\\n\\n\\\nYou may include this mod in your modpack and distribute the modpack without restrictions.\\n\\\nYou may modify and distribute this mod in accordance with the LGPLv3.\\n\\\n\\n\\\nLicense:\\n\\\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\\n\\\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n\\\nYou should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.\\n\\\n\\n\\\nAcknowledgements:\\n\\\nFor Entity Spring: https://github.com/jglrxavpok\\n\\\nFor logo help: https://github.com/tenmyouji\\n\\\nFor artwork: https://twitter.com/danfront2\\n\\\n\\n\\ ",
+	"authors": [
+		"Murad Akhundov",
+		"EDToaster",
+		"luaxlab",
+		"Abbie5"
+	],
+	"contact": {
+		"homepage": "https://littlelogistics.murad.dev",
+		"sources": "https://github.com/LittleLogisticsFabric/LittleLogisticsFabric/"
+	},
+	"license": "LGPLv3",
+	"icon": "modbanner.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.murad.shipping.LittleLogisticsFabric"
+		],
+		"client": [
+			"dev.murad.shipping.LittleLogisticsFabricClient"
+		],
+		"fabric-datagen": [
+			"dev.murad.shipping.LittleLogisticsFabricDataGenerator"
+		]
+	},
+	"mixins": [
+		"littlelogistics.mixins.json",
+		{
+			"config": "littlelogistics.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
